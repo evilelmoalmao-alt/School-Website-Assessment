@@ -15,6 +15,35 @@ html {
   }
 }
 
+@keyframes fadeInGlow-Mail {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    color: rgb(96, 198, 164);;
+  }
+  100% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px #2be7f8, 0 0 20px #5ecefb, 0 0 30px rgb(35, 227, 214);
+    color: aquamarine;
+  }
+}
+
+@keyframes fadeOutGlow-Mail {
+  0% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px #2be7f8, 0 0 20px #5ecefb, 0 0 30px rgb(35, 227, 214);
+    color: aquamarine;
+    
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    color: rgb(96, 198, 164);
+  }
+}
+
 @keyframes fadeInGlow-Bottom {
   0% {
     opacity: 1;
@@ -35,7 +64,16 @@ html {
   100% {
     transform: translateY(-100%);
   }
-  
+}
+
+@keyframes Slide-Down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes Turn-Down {
@@ -50,6 +88,21 @@ html {
 
   100% {
     transform: translateY(200px);
+  }
+}
+
+@keyframes Turn-Up {
+  0% {
+    transform: translateY(200px);
+  }
+
+  50% {
+    transform: translateY(30px);
+    
+  }
+
+  100% {
+    transform: translateY(0%) rotate(180deg);
   }
 }
 
@@ -71,10 +124,19 @@ html {
 .front-text {
   position: absolute;
   font-size: 48px;
-  color: rgb(43, 214, 252);
+  color: aquamarine;
   left: 42%;
   top: 15%;
   animation: fadeInGlow 1.0s forwards;
+}
+
+.top-banner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -900%;
+  left: 0%;
+  background-color: rgba(25, 25, 25, 255);  
 }
 
 .bottom-banner {
@@ -83,11 +145,25 @@ html {
   width: 100%;
   bottom: -100%;
   left: 0%;
-  background-color: rgba(25, 25, 25, 255);
-  animation: slide 0.5s ease-in-out;
-  animation-direction: reverse;
-  animation-play-state: paused;
-  animation-fill-mode: both; /* Keeps the element at the start/end points */  
+  background-color: rgba(25, 25, 25, 255);  
+}
+
+.contact-us-info {
+  position: absolute;
+  font-size: 24px;
+  color: rgb(96, 198, 164);
+  left: 10px;
+  bottom: 10px;
+}
+
+.contact-us-info:hover {
+  animation: fadeInGlow-Mail 1.0s forwards;
+  color: aquamarine;
+}
+
+.contact-us-info:not(:hover) {
+  animation: fadeOutGlow-Mail 1.0s forwards;
+  color: aquamarine;
 }
 
 .bottom-banner-inv {
@@ -112,6 +188,14 @@ html {
 
 .bottom-banner-inv:hover .bottom-banner {
   animation: Slide-Up forwards 1s;
+}
+
+.bottom-banner-inv:hover .bottom-banner {
+  animation: Slide-Up forwards 1s;
+}
+
+.bottom-banner-inv:not(:hover) .bottom-banner {
+  animation: Slide-Down forwards 1s;
 }
 
 .bottom-banner-inv:hover .arrow img {
