@@ -1,6 +1,6 @@
 html {
     background: black;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @keyframes fadeInGlow-Top {
@@ -12,6 +12,66 @@ html {
     opacity: 1;
     /* Layered shadows for a deep neon effect */
     text-shadow: 0 0 10px rgb(255, 228, 197), 0 0 20px rgb(255, 228, 197), 0 0 30px rgb(255, 228, 197);
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    width: 100%;
+    height: 0%;
+    left: 0%;
+    top: 0%;
+  }
+
+  100% {
+    width: 100%;
+    height: 95%;
+    left: 0%;
+    top: 0%;
+  }
+}
+
+@keyframes dropdown-text {
+  0% {
+    left: 0%;
+    top: -20%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 80px;
+    left: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes dropup-text {
+  0% {
+    top: 80px;
+    left: 10px;
+    opacity: 1;
+  }
+
+  100% {
+    left: 0%;
+    top: -20%;
+    opacity: 0;
+  }
+}
+
+@keyframes dropup {
+  0% {
+    width: 100%;
+    height: 95%;
+    left: 0%;
+    top: 0%;
+  }
+
+  100% {
+    width: 100%;
+    height: 0%;
+    left: 0%;
+    top: 0%;
   }
 }
 
@@ -61,30 +121,131 @@ html {
   left: 12.5%;
 }
 
-.info-drop-down {
-
-}
-
 .discover-top {
     position: absolute;
-    width: 92%;
-    height: 6%;
-    left: 4%;
-    top: 7%;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 0%;
     background-color: rgb(20 ,35 ,28);
     text-anchor: middle;
     border: 1px solid;
     border-color: rgb(36, 65, 53);
+    z-index: 4;
+}
+
+.discover-top-text {
+  color: rgb(255, 217, 166);
+  font-size: 32px;
+  padding: 10px;
 }
 
 .discover {
     position: absolute;
-    width: 92%;
-    height: 50%;
-    left: 4%;
-    top: 13%;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
     text-anchor: middle;
     border: 1px solid;
     border-color: rgb(36, 65, 53);
     background-color: rgb(16, 26, 22);
+}
+
+.discover-text {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  color: rgb(255, 217, 166);
+  font-size: 32px;
+}
+
+.discover-inv {
+  position: absolute;
+  height: 50%;
+  width: 35%;
+  top: 74%;
+  left: 4%;
+  z-index: 5;
+}
+
+.discover2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    text-anchor: middle;
+    border: 1px solid;
+    border-color: rgb(36, 65, 53);
+    background-color: rgb(16, 26, 22);
+}
+
+.discover-top2 {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0%;
+    top: 0%;
+    background-color: rgb(20 ,35 ,28);
+    text-anchor: middle;
+    border: 1px solid;
+    border-color: rgb(36, 65, 53);
+    z-index: 4;
+}
+
+.discover-top-text2 {
+  color: rgb(255, 217, 166);
+  font-size: 32px;
+  padding: 10px;
+}
+
+.discover-text2 {
+  position: absolute;
+  top: 160px;
+  left: 10px;
+  color: rgb(255, 217, 166);
+  font-size: 32px;
+}
+
+.discover-inv2 {
+  position: absolute;
+  height: 60%;
+  width: 35%;
+  top: 90%;
+  left: 54%;
+  z-index: 5;
+}
+
+.discover-inv:hover .discover {
+  animation: dropdown 0.9s forwards;
+}
+
+.discover-inv:hover .discover-text {
+  animation: dropdown-text 0.9s forwards
+}
+
+.discover-inv:not(:hover) .discover {
+  animation: dropup 0.9s forwards;
+}
+
+.discover-inv:not(:hover) .discover-text {
+  animation: dropup-text 0.9s forwards;
+}
+
+
+.discover-inv2:hover .discover2 {
+  animation: dropdown 0.9s forwards;
+}
+
+.discover-inv2:hover .discover-text2 {
+  animation: dropdown-text 0.9s forwards
+}
+
+.discover-inv2:not(:hover) .discover2 {
+  animation: dropup 0.9s forwards;
+}
+
+.discover-inv2:not(:hover) .discover-text2 {
+  animation: dropup-text 0.9s forwards;
 }
