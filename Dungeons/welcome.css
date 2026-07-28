@@ -112,6 +112,19 @@ html {
   animation: fadeInGlow-Top 1s forwards;
 }
 
+.top-banner-text-right a {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  right: 2%;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text-right a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}
+
 .front-text-inv {
   position: absolute;
   float: right;
@@ -135,8 +148,9 @@ html {
   font-size: 20px;
   color: rgb(255, 214, 127);
   top: 20%;
+  left: 3%;
   width: 90%;
-  
+  text-align: center;
 }
 
 .discover-top {
@@ -163,7 +177,7 @@ html {
   width: 100%;
   height: fit-content;
   left: 0%;
-  top: 0%;
+  top: 100%;
   text-anchor: middle;
   border: 1px solid;
   border-color: rgb(36, 65, 53);
@@ -182,8 +196,8 @@ html {
   position: absolute;
   height: 55vh;
   width: 35%;
-  top: 74%;
-  left: 4%;
+  left: 10%;
+  top: 70%;
   z-index: 5;
 }
 
@@ -282,6 +296,8 @@ html {
   left: 4%;
   z-index: 5;
 }
+
+
 
 .discover-inv:hover .discover {
   animation: dropdown 0.9s forwards;

@@ -1,0 +1,108 @@
+html {
+    background: black;
+    overflow-x: hidden;
+}
+
+@keyframes fadeInGlow-Top {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px rgb(255, 228, 197), 0 0 20px rgb(255, 228, 197), 0 0 30px rgb(255, 228, 197);
+  }
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.top-banner {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(25, 25, 25, 255);
+}
+
+.top-banner-text {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  left: 2%;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text a {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  left: 2%;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}
+
+.front-text-inv {
+  position: absolute;
+  float: right;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 30vh;
+}
+
+.bottom-text {
+  position: relative;
+  font-size: 20px;
+  color: rgb(255, 214, 127);
+  top: 20%;
+  width: 90%;
+  left: 5%;
+  text-align: center;
+}
+
+.bottom-text a {
+  color: rgb(241, 230, 188);
+  text-decoration: underline;
+}
+
+.bottom-text a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}
+
+.bottom-text a:visited {
+  color: rgb(241, 230, 188);
+}
+
+.img {
+  display: flex;
+  justify-content: center
+}
+
+.img img {
+  position:relative;
+  left: 0%;
+}
+
+.top-banner-text-right a {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  right: 2%;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text-right a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}

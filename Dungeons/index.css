@@ -168,6 +168,15 @@ html {
   top: 23%;
 }
 
+.top-banner-text-left-right {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  right: 25vh;
+  top: 23%;
+  text-decoration: underline;
+}
+
 .top-banner-text-right a {
   position: absolute;
   font-size: 48px;
@@ -179,6 +188,14 @@ html {
 
 .top-banner-text-right a:hover {
   animation: fadeInGlow-Top 1s forwards;
+}
+
+.top-banner-text-left-right a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}
+
+.top-banner-text-left-right a:visited {
+  color: rgb(241, 230, 188);
 }
 
 .bottom-banner {
