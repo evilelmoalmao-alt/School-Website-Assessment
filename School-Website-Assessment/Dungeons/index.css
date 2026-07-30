@@ -138,7 +138,7 @@ html {
   font-size: 48px;
   color: aquamarine;
   left: 42%;
-  top: 15%;
+  top: 200%;
   animation: fadeInGlow 1.0s forwards;
 }
 
@@ -148,7 +148,7 @@ html {
   width: 100%;
   top: 0%;
   left: 0%;
-  background-color: rgba(25, 25, 25, 255);  
+  background-color: rgba(25, 25, 25, 255);
 }
 
 .top-banner-text-right {
@@ -247,6 +247,22 @@ html {
   height: 20px;
   left: 50%;
   bottom: 100%;
+}
+
+.left-side-image {
+  position: absolute;
+  left: 6%;
+  top: 35%;
+}
+
+.right-side-image {
+  position: absolute;
+  right: 6%;
+  top: 35%;
+}
+
+.right-side-image img {
+  width: 800px;
 }
 
 .bottom-banner-inv:hover .bottom-banner {

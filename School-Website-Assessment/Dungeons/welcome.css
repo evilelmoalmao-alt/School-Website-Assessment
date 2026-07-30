@@ -83,7 +83,7 @@ html {
 
 .top-banner {
   position: absolute;
-  height: 10%;
+  height: 100px;
   width: 100%;
   top: 0%;
   left: 0%;
@@ -167,9 +167,11 @@ html {
 }
 
 .discover-top-text {
+  position: absolute;
   color: rgb(255, 217, 166);
   font-size: 32px;
-  padding: 10px;
+  left: 10px;
+  top: 23%;
 }
 
 .discover {
