@@ -1,0 +1,266 @@
+html {
+    background: black;
+    overflow: hidden;
+}
+
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px #2be7f8, 0 0 20px #5ecefb, 0 0 30px rgb(35, 227, 214);
+  }
+}
+
+@keyframes fadeInGlow-Mail {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    color: rgb(96, 198, 164);;
+  }
+  100% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px #2be7f8, 0 0 20px #5ecefb, 0 0 30px rgb(35, 227, 214);
+    color: aquamarine;
+  }
+}
+
+@keyframes fadeOutGlow-Mail {
+  0% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px #2be7f8, 0 0 20px #5ecefb, 0 0 30px rgb(35, 227, 214);
+    color: aquamarine;
+    
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+    color: rgb(96, 198, 164);
+  }
+}
+
+@keyframes fadeInGlow-Bottom {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px white;
+  }
+}
+
+@keyframes fadeInGlow-Top {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+    /* Layered shadows for a deep neon effect */
+    text-shadow: 0 0 10px rgb(255, 228, 197), 0 0 20px rgb(255, 228, 197), 0 0 30px rgb(255, 228, 197);
+  }
+}
+
+@keyframes Slide-Up {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes Slide-Down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes Turn-Down {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(30px) rotate(180deg);
+    
+  }
+
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+@keyframes Turn-Up {
+  0% {
+    transform: translateY(200px);
+  }
+
+  50% {
+    transform: translateY(30px);
+    
+  }
+
+  100% {
+    transform: translateY(0%) rotate(180deg);
+  }
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.front-text-container {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(35, 252, 104);
+  left: 43%;
+  top: 15%;
+  animation: fadeInGlow 1.0s forwards;
+}
+
+.front-text {
+  position: absolute;
+  font-size: 48px;
+  color: aquamarine;
+  left: 42%;
+  top: 15%;
+  animation: fadeInGlow 1.0s forwards;
+}
+
+.top-banner {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(25, 25, 25, 255);  
+}
+
+.top-banner-text-right {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  right: 210px;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text-right a {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  left: 2%;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text-left {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  left: 2%;
+  top: 23%;
+}
+
+.top-banner-text-left-right {
+  position: absolute;
+  font-size: 48px;
+  color: rgb(241, 230, 188);
+  right: 240px;
+  top: 23%;
+  text-decoration: underline;
+}
+
+.top-banner-text-left-right a:visited {
+  color: rgb(241, 230, 188);
+}
+
+.top-banner-text-right a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}
+
+.top-banner-text-left-right a:hover {
+  animation: fadeInGlow-Top 1s forwards;
+}
+
+.top-banner-text-left-right a:visited {
+  color: rgb(241, 230, 188);
+}
+
+.bottom-banner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -100%;
+  left: 0%;
+  background-color: rgba(25, 25, 25, 255);  
+}
+
+.contact-us-info {
+  position: absolute;
+  font-size: 24px;
+  color: rgb(96, 198, 164);
+  left: 10px;
+  bottom: 10px;
+}
+
+.contact-us-info:hover {
+  animation: fadeInGlow-Mail 1.0s forwards;
+  color: aquamarine;
+}
+
+.contact-us-info:not(:hover) {
+  animation: fadeOutGlow-Mail 1.0s forwards;
+  color: aquamarine;
+}
+
+.bottom-banner-inv {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  background-color: rgba(100, 100, 100, 0);
+}
+
+.arrow {
+  z-index: 2;
+}
+
+.arrow img {
+  position: relative;
+  height: 20px;
+  left: 50%;
+  bottom: 100%;
+}
+
+.bottom-banner-inv:hover .bottom-banner {
+  animation: Slide-Up forwards 1s;
+}
+
+.bottom-banner-inv:hover .bottom-banner {
+  animation: Slide-Up forwards 1s;
+}
+
+.bottom-banner-inv:not(:hover) .bottom-banner {
+  animation: Slide-Down forwards 1s;
+}
+
+.bottom-banner-inv:hover .arrow img {
+  animation: Turn-Down ease-in 1.0s
+}
