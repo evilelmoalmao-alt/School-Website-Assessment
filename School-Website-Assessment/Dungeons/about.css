@@ -86,7 +86,7 @@ html {
 
 .img {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .img img {

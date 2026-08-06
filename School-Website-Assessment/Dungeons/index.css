@@ -249,20 +249,11 @@ html {
   bottom: 100%;
 }
 
-.left-side-image {
-  position: absolute;
-  left: 6%;
-  top: 35%;
-}
-
 .right-side-image {
   position: absolute;
-  right: 6%;
-  top: 35%;
-}
-
-.right-side-image img {
-  width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .bottom-banner-inv:hover .bottom-banner {
